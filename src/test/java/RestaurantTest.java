@@ -59,6 +59,13 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //TDD test cases
+    @Test
+    public void passing_the_names_of_item_should_return_items_total(){
+        List<String> orderItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        int orderValue = restaurant.getOrderValue(orderItems);
 
+        assertEquals(388, orderValue); // Expected order value: 119 + 269 = 388
+    }
 
 }
